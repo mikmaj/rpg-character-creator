@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Role-playing Character Creator</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Edit</h1>
+    <p>Edit your character by filling the fields and click 'Save'</p>
+    <form th:object="${rpchar}" th:action="@{../../save}" action="#" method="post">
+        <input type="hidden" th:field="*{id}" class="form-control">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">Character name: </label>
+                    <input type="text" class="form-control" id="name" th:field="*{name}">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="charGender">Gender: </label>
+                    <select class="form-control" id="charGender" th:field="*{sex}">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="charAlignment">Alignment: </label>
+                    <select class="form-control" id="charAlignment" th:field="*{alignment}">
+                        <option value="Lawful Good">Lawful Good</option>
+                        <option value="Lawful Neutral">Lawful Neutral</option>
+                        <option value="Lawful Evil">Lawful Evil</option>
+                        <option value="Neutral Good">Neutral Good</option>
+                        <option value="True Neutral">True Neutral</option>
+                        <option value="Neutral Evil">Neutral Evil</option>
+                        <option value="Chaotic Good">Chaotic Good</option>
+                        <option value="Chaotic Neutral">Chaotic Neutral</option>
+                        <option value="Chaotic Evil">Chaotic Evil</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="charRace">Race: </label>
+                    <select class="form-control" id="charRace" th:field="*{race}">
+                        <option value="Dragonborn">Dragonborn</option>
+                        <option value="Dwarf">Dwarf</option>
+                        <option value="Elf">Elf</option>
+                        <option value="Gnome">Gnome</option>
+                        <option value="Half-elf">Half-Elf</option>
+                        <option value="Half-orc">Half-Orc</option>
+                        <option value="Halfling">Halfling</option>
+                        <option value="Human">Human</option>
+                        <option value="Tiefling">Tiefling</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="charClass">Class: </label>
+                    <select class="form-control" id="charClass" th:field="*{charClass}">
+                        <option value="Barbarian">Barbarian</option>
+                        <option value="Bard">Bard</option>
+                        <option value="Cleric">Cleric</option>
+                        <option value="Druid">Druid</option>
+                        <option value="Fighter">Fighter</option>
+                        <option value="Monk">Monk</option>
+                        <option value="Paladin">Paladin</option>
+                        <option value="Ranger">Ranger</option>
+                        <option value="Rogue">Rogue</option>
+                        <option value="Sorcerer">Sorcerer</option>
+                        <option value="Warlock">Warlock</option>
+                        <option value="Wizard">Wizard</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charStr">STR: </label>
+                    <input type="text" class="form-control" id="charStr" placeholder="0-100" th:field="*{strength}">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charDex">DEX: </label>
+                    <input type="text" class="form-control" id="charDex" placeholder="0-100" th:field="*{dexterity}">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charCon">CON: </label>
+                    <input type="text" class="form-control" id="charCon" placeholder="0-100" th:field="*{constitution}">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charInt">INT: </label>
+                    <input type="text" class="form-control" id="charInt" placeholder="0-100" th:field="*{intelligence}">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charWis">WIS: </label>
+                    <input type="text" class="form-control" id="charWis" placeholder="0-100" th:field="*{wisdom}">
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="charCha">CHA: </label>
+                    <input type="text" class="form-control" id="charCha" placeholder="0-100" th:field="*{charisma}">
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default" value="Save">Save</button>
+    </form>
+    <br>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
