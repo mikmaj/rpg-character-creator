@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" type="text/css" th:href="@{../css/characters.css}" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -12,8 +12,8 @@
 </head>
 <body>
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="/admin/add">Character Creator</a>
+    <nav class="navbar navbar-expand-lg navbar-inverse navbar-primary" style="background-color: #ffc107; color: white">
+        <a class="navbar-brand" href="/admin/home">Character Creator</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -31,7 +31,7 @@
 
     <h1>Your Characters:</h1>
 
-    <table class="table">
+    <table class="table table-striped table-dark">
         <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>

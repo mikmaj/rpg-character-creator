@@ -12,7 +12,7 @@
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+        <nav class="navbar navbar-expand-lg navbar-inverse navbar-primary" style="background-color: #ffc107; color: white">
             <a class="navbar-brand" href="#">Character Creator</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -29,7 +29,9 @@
             </div>
         </nav>
         <br/>
+        <img th:src="@{/images/rpgcc.png}" class="logo d-block mx-auto" alt="Logo" />
         <h3 th:utext="${userName}"></h3>
+        <h4>Start by building a new character from the button below or user the navigation to see the characters you've created!</h4>
         <br/>
         <a href="/admin/add"><button class="btn btn-success">Build Character</button></a>
     </div>

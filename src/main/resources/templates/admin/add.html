@@ -3,13 +3,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" th:href="@{../css/add.css}" />
     <title>Role-playing Character Creator</title>
 </head>
 <body>
 
 <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="#">Character Creator</a>
+    <nav class="navbar navbar-expand-lg navbar-inverse navbar-primary" style="background-color: #ffc107; color: white">
+        <a class="navbar-brand" href="/admin/home">Character Creator</a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -141,7 +142,7 @@
                 </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-default" value="Save">Save</button>
+        <button type="submit" class="btn btn-success" value="Save">Save</button>
     </form>
     <br>
 
